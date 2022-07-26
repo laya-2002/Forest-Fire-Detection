@@ -11,10 +11,9 @@ function readImage(element) {
         'Prediction-key': config.FFD_KEY
       },
       type: 'POST',
-      body: file,
       success: function(response) {
         var result = response["Predictions"];
-        alert('Detection is successful.');
+        alert(result);
       },
       error: function(error) {
         alert('Please upload an image file.');
